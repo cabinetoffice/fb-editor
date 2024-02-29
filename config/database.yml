@@ -20,10 +20,14 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: <%= ENV["FB_EDITOR_DB_USERNAME"] %>
+  password: <%= ENV["FB_EDITOR_DB_PASSWORD"] %>
+  host: <%= ENV["FB_EDITOR_DB_HOST"] %>
+  port: <%= ENV["FB_EDITOR_DB_PORT"] %>
+  database: <%= ENV["FB_EDITOR_DB_DATABASE_NAME"] %>
 
 development:
   <<: *default
-  database: fb_editor_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -81,6 +85,3 @@ test:
 #
 production:
   <<: *default
-  database: fb_editor_production
-  username: fb_editor
-  password: <%= ENV['FB_EDITOR_DATABASE_PASSWORD'] %>

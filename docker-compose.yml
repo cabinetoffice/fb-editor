@@ -21,9 +21,13 @@ services:
       - 9090:3000
     environment:
       RAILS_ENV: development
-      DATABASE_URL: "postgres://postgres:password@editor-db/editor_local"
+      FB_EDITOR_DB_USERNAME: postgres
+      FB_EDITOR_DB_PASSWORD: password
+      FB_EDITOR_DB_HOST: editor-db
+      FB_EDITOR_DB_PORT: 5432
+      FB_EDITOR_DB_DATABASE_NAME: editor_local
       RAILS_LOG_TO_STDOUT: 'true'
-      METADATA_API_URL: "http://editor-metadata-app:3000/"
+      METADATA_API_URL: "http://metadata-app:3000/"
       PLATFORM_ENV: "local"
       # Keys below are all fake and can be committed to git
       ENCODED_PRIVATE_KEY: "-----BEGIN RSA PRIVATE KEY-----\nMIIEowIBAAKCAQEA+OtquVq4iSKV6xTibO3snW70AK0/ILG/vDt8KNCQNf/411D7\nh+F3Kpw+vNANfHdJTfJUV4/dYz5HHsAxAaG8qyHiNycy9cNsHoRCold5Zp8iEBkS\ncXOSh32qKD6e0brwJvpyv0QcHWfKZz46PBm6TUxrC6z9nwiePQX/sryFhpzX8sL7\nD09Qwc1c/42PHhLkxvcCioHhj33zT+YOCNvI5RyYPG6lKvn1QSKvSJ+zoAnwP7R7\nL7c/QixADzleAq7HNEhE8p0T0OVegWa85Ox7fK9j/vZw9bFYOK1CVNQcf+VGh2Fa\ngs/7D9T0nrhQ3xKxpKvnfzVoqga38V7gWZyt8QIDAQABAoIBAQDtpYyh49w0iQGK\ni8jU6J4zfB+WmdCgPTNp2XzjVqOn+ncv0lAiXX6w/rTi/NszTot80HP3mRFrU6UA\n1cqz3R9MXzAjKdh8TJPn2qvnZA4yjJEvv1AdYpKtqqsOeyKT556qCAgPVU5mQJY7\n1WwxvvpgHCpC3mjRMaApcJW7pkLwzOFTiP3B5EYMfPMGJfqPsQYFhRXlft0fC77Y\nADosRuU5IFQbQHENo22PLD+BJ2vY7i/RiOrVhUg9wGjFAU+ghXIdO6BgbMEV7+Dw\nagw6WJfS81cH3RFU6ZwJqDANzrfRRMxebH2WLtbE4iSFeBEpvCV2T6VCDRvPoNbO\n4ATOMzYBAoGBAP6GeamkUYZcIrB0oWZBoFsUmaKxMrEDaoQZ7QFFICEAJWvyUEzI\n4WUILskeK7RnFmfrYPeuCK8D//EZUi3j77DXjOFoSc2/Q10/FVoXPPj1xp2Uo5zZ\nxc0apU3KNL4vvMo7ZHcDO17hy7UDfN6CxmutuE93MXHbQiypN0AC9GVhAoGBAPpc\noIKr86PPs5qF++vTYvAvqGTmQ5JG1hddF1rR4IOS/6MoMZ1pB2+ETFVum/2/gwi9\n4iuARiEbE+imvaDRDIMQ6e1M5CFtRA19y703JwieeLFrzNgNp0CwJB9H+SQj9Z0P\nfeOU3u+nyFwnfGA/lBxaNu3eJmHYlre5hsI6NIKRAoGAM2iL6ETFJqMzanqUIug8\ncEkP4vlxaKls+TOXWDtTCvdRl6UArRGh3NszP/H1F+H+d4zmMACZxmfDaToZDCXO\nwuQ2k0ySI5lvDMVyFZk9+ncB39Am38Zomk24d6bQ0l0n/5zRZOxlMHvgvjXvIa4+\nT39uC7biaMHFcunWu/oczOECgYADLanb/tLZAYoGLC1GkShwZCp/HW0+LigJo+To\nAkIXaYZVS+1VUkAF6mgNrZnNXuEK+14jrz00rmNSUMuXfw/pmg1eNduvkPOMOEyd\n2lVkhp6Bohy3oXS+HX5X51ICY3J6y/eNLBaodDjW8qlhj20R7xNDcc6K73T6YCCV\n1qdUAQKBgHMT8rQMzmCRusDPc2Dl/qjDT/rDQ1iMQQNQB2yvg6z41QgAhb90mOB4\nY8i256sOPWYqRymxq40FR0ZFkW/y1cceceVpjWvhS5ZrjgLmDbZnSUQnMafUNgNy\nK0VWsiR2LxJCBgiw0evtz+W2GOYpOhgpep5AjLITla5FsZUSNI3c\n-----END RSA PRIVATE KEY-----"
@@ -34,7 +38,7 @@ services:
       PUBLISH_FOR_REVIEW_PASSWORD: 'mojforms'
     depends_on:
       - editor-db
-      - editor-metadata-app
+      - metadata-app
 
   editor-metadata-db:
     image: postgres:12.4-alpine
@@ -44,7 +48,7 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_DB: metadata_local
 
-  editor-metadata-app:
+  metadata-app:
     build:
       context: https://github.com/ministryofjustice/fb-metadata-api.git#main
       args:
@@ -55,7 +59,7 @@ services:
       - 9091:3000
     environment:
       DATABASE_URL: "postgres://postgres:password@editor-metadata-db/metadata_local"
-      RAILS_ENV: test
+      RAILS_ENV: development
       SERVICE_TOKEN_CACHE_ROOT_URL: 'http://editor-service-token-cache-app:3000'
       MAX_IAT_SKEW_SECONDS: '60'
       RAILS_LOG_TO_STDOUT: 'true'
