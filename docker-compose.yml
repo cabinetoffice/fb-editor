@@ -50,7 +50,7 @@ services:
 
   metadata-app:
     build:
-      context: https://github.com/ministryofjustice/fb-metadata-api.git#main
+      context: https://github.com/cabinetoffice/fb-metadata-api.git#main
       args:
         BUNDLE_ARGS: ''
     tty: true
@@ -58,7 +58,11 @@ services:
     ports:
       - 9091:3000
     environment:
-      DATABASE_URL: "postgres://postgres:password@editor-metadata-db/metadata_local"
+      FB_METADATA_DB_USERNAME: postgres
+      FB_METADATA_DB_PASSWORD: password
+      FB_METADATA_DB_HOST: editor-metadata-db
+      FB_METADATA_DB_PORT: 5432
+      FB_METADATA_DB_DATABASE_NAME: metadata_local
       RAILS_ENV: development
       SERVICE_TOKEN_CACHE_ROOT_URL: 'http://editor-service-token-cache-app:3000'
       MAX_IAT_SKEW_SECONDS: '60'
@@ -70,7 +74,7 @@ services:
   editor-service-token-cache-app:
     container_name: editor-service-token-cache-app
     build:
-      context: https://github.com/ministryofjustice/fb-service-token-cache.git#main
+      context: https://github.com/cabinetoffice/fb-service-token-cache.git#main
     environment:
       SENTRY_DSN: sentry-dsn
       RAILS_ENV: test
