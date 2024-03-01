@@ -139,9 +139,9 @@ en:
       component_warning: Upload your options for this question via the component menu - click the question title to show the menu button (...).
       success: Options uploaded. Use preview or publish to view them.
   header:
-    service_name: "MoJ Forms"
+    service_name: "CO Forms"
     home_link_text: "Back to Home"
-    home_link_alt: "Ministry of Justice Logo - homepage"
+    home_link_alt: "Cabinet Office Logo - homepage"
 
   partials:
     header:
@@ -158,17 +158,17 @@ en:
     show:
       phase: beta
       phase_banner: This is a new service - your %{feedback_link} will help us to improve it.
-      title: MoJ Forms
+      title: CO Forms
       lede: Prototype, test and publish online forms quickly and easily
-      body: MoJ Forms is available to employees of MoJ and its agencies and public bodies. To request access, %{contact_us_link}. As we are still in development, you will need to consent to some research activities.
-      more_info: To find out more about MoJ Forms, visit our %{product_site_link}, %{email_link}, or %{slack_link}</a>.
+      body: CO Forms is available to employees of CO and its agencies and public bodies. To request access, %{contact_us_link}. As we are still in development, you will need to consent to some research activities.
+      more_info: To find out more about CO Forms, visit our %{product_site_link}, %{email_link}, or %{slack_link}</a>.
       product_site_link_text: product site
       user_guide_link_text: user guide
       contact_us_link_text: contact us
       email_link_text: moj-forms@digital.justice.gov.uk
       slack_link_text: ask a question on Slack
       feedback_link_text: feedback
-      callout: You will need an @digital.justice.gov.uk, @justice.gov.uk or @cica.org.uk email address to use MoJ Forms.
+      callout: You will need an @digital.cabinet-office.gov.uk or @cabinet-office.gov.uk email address to use CO Forms.
       sign_in: Sign in
   auth:
     existing_user:
@@ -181,7 +181,7 @@ en:
       body: 'You cannot sign in with that email address'
     unauthorised:
       heading: You don't have access to that page
-      body: Contact the form owner or the MoJ Forms team for help.
+      body: Contact the form owner or the CO Forms team for help.
   actions:
     back: 'Back'
     edit: 'Edit'
@@ -367,7 +367,7 @@ en:
       help: Additional guidance for URL is available on
       form_name:
         label: 'Form name'
-        lede: This appears in the header of all your form pages and is what your form is listed as in the MoJ Forms editor. A good name describes the task the form is designed for and starts with an action, such as "Get help with..." or "Apply for..." %{href}.
+        lede: This appears in the header of all your form pages and is what your form is listed as in the CO Forms editor. A good name describes the task the form is designed for and starts with an action, such as "Get help with..." or "Apply for..." %{href}.
         href: <a class="govuk-link" href="https://moj-forms.service.justice.gov.uk/settings" target="_blank" rel="noopener noreferrer">Learn more about naming a form</a>
       form_slug:
         label: 'URL'
@@ -392,7 +392,7 @@ en:
     reference_payment:
       link: Reference numbers and GOV.UK Pay
       heading: Reference numbers and GOV.UK Pay
-      description: Generate and provide your users with a unique reference number for each submission. You can combine a reference number with a GOV.UK Pay payment link to easily match MoJ Forms submissions when taking payments. (For details, see the %{href}.)
+      description: Generate and provide your users with a unique reference number for each submission. You can combine a reference number with a GOV.UK Pay payment link to easily match CO Forms submissions when taking payments. (For details, see the %{href}.)
       href: <a class="govuk-link" href="%{url}" target="_blank" rel="noopener noreferrer">user guide</a>
       lede: Generate a unique reference number for each submission and link users to your GOV.UK Pay payment page.
     reference_number:
@@ -477,14 +477,14 @@ en:
       info:
         heading: 'Unlock publishing to Live'
         content: 'You need to apply to %{href}. This can take up to 3 working days. You should only do this when you think your form is ready.'
-        content_2: 'We will check your form against the MoJ Forms terms of use and let you know when publishing is unlocked.'
+        content_2: 'We will check your form against the CO Forms terms of use and let you know when publishing is unlocked.'
         link_text: 'unlock the ability to publish to Live'
         link_url: 'https://moj-forms.service.justice.gov.uk/testing-and-publishing/#final-check'
       button: 'Apply to unlock publishing'
       confirmation:
         heading: 'We are reviewing your request to unlock publishing'
         subheading: 'What happens next?'
-        text_1: 'A member of the MoJ Forms team will review your form against the terms of use to confirm it is ready to go live.'
+        text_1: 'A member of the CO Forms team will review your form against the terms of use to confirm it is ready to go live.'
         text_2: 'This can take up to 3 working days.'
         ul: 'We will then either:'
         li_1: 'unlock your ability to publish to Live and let you know by email'
@@ -512,7 +512,7 @@ en:
       five_link_text: 'settings'
       five_link_ref: 'https://moj-forms.service.justice.gov.uk/settings/'
       six: 'I have read and agree to the %{href}'
-      six_link_text: 'MoJ Forms Terms of use'
+      six_link_text: 'CO Forms Terms of use'
       six_link_ref: 'https://moj-forms.service.justice.gov.uk/terms-of-use/'
     autocomplete_items:
       dev:
@@ -594,7 +594,7 @@ en:
         send_by_email_dev: Enable email on Test
         send_by_email_production: Enable email on Live
         service_email_output: To
-        service_email_output_hint: This must be an MoJ email address or other approved address
+        service_email_output_hint: This must be a CO email address or other approved address
         service_email_from: 'From:'
         service_email_subject: Subject
         service_email_body: Message
@@ -609,7 +609,7 @@ en:
         csv_sample: See sample CSV
         csv_checkbox: Send a separate email with answers in a CSV
       confirmation_email_settings:
-        reply_to_hint: The email address that replies will go to - this must be an MoJ email address or other approved email address
+        reply_to_hint: The email address that replies will go to - this must be a CO email address or other approved email address
         confirmation_email_component_id: To the email address captured by
         confirmation_email_subject: Subject
         confirmation_email_body: Message
@@ -692,11 +692,11 @@ en:
           invalid_payment_url: "Enter a valid GOV.UK Pay payment link URL starting with \"%{link_start_with}\""
           link_start_with: 'https://www.gov.uk/payments/'
         email_settings:
-          domain_invalid: 'The address you want to send the email to must be an MoJ email address or other approved address.'
+          domain_invalid: 'The address you want to send the email to must be a CO email address or other approved address.'
           blank: Enter a to email address
           invalid: Enter an email address in the correct format, like name@example.com
         confirmation_email_settings:
-          domain_invalid: The reply address must be an MoJ email address or other approved address
+          domain_invalid: The reply address must be a CO email address or other approved address
           blank: Enter a reply email address
           invalid: Enter an email address in the correct format, like name@example.com
         service_slug:
