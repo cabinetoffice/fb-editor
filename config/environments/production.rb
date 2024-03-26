@@ -94,4 +94,5 @@ Rails.application.configure do
 
 
   config.hosts << "builder.forms.preprod.grid.civilservice.gov.uk"
+  config.hosts << "editor.forms.preprod.grid.civilservice.gov.uk"
 end

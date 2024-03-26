@@ -68,4 +68,5 @@ Rails.application.configure do
   # config.action_cable.disable_request_forgery_protection = true
 
   config.hosts << "builder.forms.preprod.grid.civilservice.gov.uk"
+  config.hosts << "editor.forms.preprod.grid.civilservice.gov.uk"
 end
