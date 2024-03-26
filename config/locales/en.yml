@@ -139,7 +139,7 @@ en:
       component_warning: Upload your options for this question via the component menu - click the question title to show the menu button (...).
       success: Options uploaded. Use preview or publish to view them.
   header:
-    service_name: "CO Forms"
+    service_name: "Gov Returns"
     home_link_text: "Back to Home"
     home_link_alt: "Cabinet Office Logo - homepage"
 
@@ -158,17 +158,17 @@ en:
     show:
       phase: beta
       phase_banner: This is a new service - your %{feedback_link} will help us to improve it.
-      title: CO Forms
+      title: Gov Returns
       lede: Prototype, test and publish online forms quickly and easily
-      body: CO Forms is available to employees of CO and its agencies and public bodies. To request access, %{contact_us_link}. As we are still in development, you will need to consent to some research activities.
-      more_info: To find out more about CO Forms, visit our %{product_site_link}, %{email_link}, or %{slack_link}</a>.
+      body: Gov Returns is available to employees of CO and its agencies and public bodies. To request access, %{contact_us_link}. As we are still in development, you will need to consent to some research activities.
+      more_info: To find out more about Gov Returns, visit our %{product_site_link}, %{email_link}, or %{slack_link}</a>.
       product_site_link_text: product site
       user_guide_link_text: user guide
       contact_us_link_text: contact us
       email_link_text: moj-forms@digital.justice.gov.uk
       slack_link_text: ask a question on Slack
       feedback_link_text: feedback
-      callout: You will need an @digital.cabinet-office.gov.uk or @cabinet-office.gov.uk email address to use CO Forms.
+      callout: You will need an @digital.cabinet-office.gov.uk or @cabinet-office.gov.uk email address to use Gov Returns.
       sign_in: Sign in
   auth:
     existing_user:
@@ -181,7 +181,7 @@ en:
       body: 'You cannot sign in with that email address'
     unauthorised:
       heading: You don't have access to that page
-      body: Contact the form owner or the CO Forms team for help.
+      body: Contact the form owner or the Gov Returns team for help.
   actions:
     back: 'Back'
     edit: 'Edit'
@@ -367,7 +367,7 @@ en:
       help: Additional guidance for URL is available on
       form_name:
         label: 'Form name'
-        lede: This appears in the header of all your form pages and is what your form is listed as in the CO Forms editor. A good name describes the task the form is designed for and starts with an action, such as "Get help with..." or "Apply for..." %{href}.
+        lede: This appears in the header of all your form pages and is what your form is listed as in the Gov Returns editor. A good name describes the task the form is designed for and starts with an action, such as "Get help with..." or "Apply for..." %{href}.
         href: <a class="govuk-link" href="https://moj-forms.service.justice.gov.uk/settings" target="_blank" rel="noopener noreferrer">Learn more about naming a form</a>
       form_slug:
         label: 'URL'
@@ -392,7 +392,7 @@ en:
     reference_payment:
       link: Reference numbers and GOV.UK Pay
       heading: Reference numbers and GOV.UK Pay
-      description: Generate and provide your users with a unique reference number for each submission. You can combine a reference number with a GOV.UK Pay payment link to easily match CO Forms submissions when taking payments. (For details, see the %{href}.)
+      description: Generate and provide your users with a unique reference number for each submission. You can combine a reference number with a GOV.UK Pay payment link to easily match Gov Returns submissions when taking payments. (For details, see the %{href}.)
       href: <a class="govuk-link" href="%{url}" target="_blank" rel="noopener noreferrer">user guide</a>
       lede: Generate a unique reference number for each submission and link users to your GOV.UK Pay payment page.
     reference_number:
@@ -477,14 +477,14 @@ en:
       info:
         heading: 'Unlock publishing to Live'
         content: 'You need to apply to %{href}. This can take up to 3 working days. You should only do this when you think your form is ready.'
-        content_2: 'We will check your form against the CO Forms terms of use and let you know when publishing is unlocked.'
+        content_2: 'We will check your form against the Gov Returns terms of use and let you know when publishing is unlocked.'
         link_text: 'unlock the ability to publish to Live'
         link_url: 'https://moj-forms.service.justice.gov.uk/testing-and-publishing/#final-check'
       button: 'Apply to unlock publishing'
       confirmation:
         heading: 'We are reviewing your request to unlock publishing'
         subheading: 'What happens next?'
-        text_1: 'A member of the CO Forms team will review your form against the terms of use to confirm it is ready to go live.'
+        text_1: 'A member of the Gov Returns team will review your form against the terms of use to confirm it is ready to go live.'
         text_2: 'This can take up to 3 working days.'
         ul: 'We will then either:'
         li_1: 'unlock your ability to publish to Live and let you know by email'
@@ -512,7 +512,7 @@ en:
       five_link_text: 'settings'
       five_link_ref: 'https://moj-forms.service.justice.gov.uk/settings/'
       six: 'I have read and agree to the %{href}'
-      six_link_text: 'CO Forms Terms of use'
+      six_link_text: 'Gov Returns Terms of use'
       six_link_ref: 'https://moj-forms.service.justice.gov.uk/terms-of-use/'
     autocomplete_items:
       dev:
