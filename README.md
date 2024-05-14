@@ -5,7 +5,7 @@ New editor for MoJ Forms.
 ## Prerequisites
 * Docker
 * Node (version 16.20.1 LTS)
-* Ruby v2.7.7
+* Ruby (look at the `.ruby-version`)
 * Postgresql
 * Yarn
 
