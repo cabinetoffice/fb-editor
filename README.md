@@ -120,7 +120,14 @@ machine to point to the test environment you need to run:
 
 ### Docker Compose
 
-There are three docker compose files.
+For local development, run:
+
+    make setup
+
+which will spin up the services in the correct order.
+
+
+Docker compose setup is made up of these three files:
 
 #### docker-compose.yml
 
