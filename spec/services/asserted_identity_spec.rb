@@ -1,13 +1,13 @@
 describe AssertedIdentity do
   subject(:asserted_identity) { described_class }
 
-  describe '#from_auth0_userinfo' do
+  describe '#from_cognito_userinfo' do
     context 'no name in claims' do
       let(:user_info) do
         {
+          'uid' => SecureRandom.uuid,
+          'provider' => 'provider',
           'info' => {
-            'uuid' => SecureRandom.uuid,
-            'provider' => 'provider',
             'email' => email_address
           }
         }
@@ -17,7 +17,7 @@ describe AssertedIdentity do
         let(:email_address) { 'riri.williams@stark-industries.com' }
 
         it 'uses the email to create the name' do
-          expect(subject.from_auth0_userinfo(user_info).name).to eq('Riri Williams')
+          expect(subject.from_cognito_userinfo(user_info).name).to eq('Riri Williams')
         end
       end
 
@@ -25,7 +25,7 @@ describe AssertedIdentity do
         let(:email_address) { 'jean.luc.picard@ncc1701d.com' }
 
         it 'uses the email to create the name' do
-          expect(subject.from_auth0_userinfo(user_info).name).to eq('Jean Luc Picard')
+          expect(subject.from_cognito_userinfo(user_info).name).to eq('Jean Luc Picard')
         end
       end
     end

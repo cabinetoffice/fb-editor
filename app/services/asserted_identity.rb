@@ -10,7 +10,7 @@ class AssertedIdentity
     self.email = params[:email]
   end
 
-  def self.from_auth0_userinfo(userinfo = {})
+  def self.from_cognito_userinfo(userinfo = {})
     new(
       uid: userinfo['uid'],
       provider: userinfo['provider'],
