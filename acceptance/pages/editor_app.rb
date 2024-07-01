@@ -20,7 +20,7 @@ class EditorApp < SitePrism::Page
   element :sign_in_submit, :button, 'Sign In'
   ########
 
-  # Auth0
+  # Cognito
   # currently not used as we are interacting with the fields using JS
   # these will be used again in the future
   element :email_address_field, :field, 'Email'

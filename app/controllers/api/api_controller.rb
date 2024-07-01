@@ -1,6 +1,6 @@
 module Api
   class ApiController < ApplicationController
-    include Auth0Helper
+    include CognitoHelper
     before_action :require_user!
 
     def require_user!

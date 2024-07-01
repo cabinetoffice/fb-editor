@@ -3,7 +3,7 @@ RSpec.describe 'GET create test service', type: :request do
     let(:request) { get "/admin/test-service/#{service_name}" }
     let(:service_name) { SecureRandom.uuid }
     let(:authorised_user) do
-      double(id: SecureRandom.uuid, email: 'fb-acceptance-tests@digital.justice.gov.uk')
+      double(id: SecureRandom.uuid, email: 'fb-acceptance-tests@digital.cabinet-office.gov.uk')
     end
 
     before do

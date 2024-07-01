@@ -1,5 +1,5 @@
-# convenience wrapper around the info we get back from Auth0
-class Auth0UserSession
+# convenience wrapper around the info we get back from Cognito
+class CognitoUserSession
   include ActiveModel
   include ActiveModel::Validations
 

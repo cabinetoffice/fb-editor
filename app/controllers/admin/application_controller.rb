@@ -14,7 +14,7 @@ module Admin
   class ApplicationController < Administrate::ApplicationController
     include SetCurrentRequestDetails
     include ApplicationHelper
-    include Auth0Helper
+    include CognitoHelper
 
     before_action :require_user!
     before_action :authenticate_admin

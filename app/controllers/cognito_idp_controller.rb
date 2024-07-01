@@ -1,4 +1,4 @@
-class Auth0Controller < ApplicationController
+class CognitoIdpController < ApplicationController
   skip_before_action :verify_authenticity_token, only: :developer_callback
 
   def callback
@@ -28,7 +28,7 @@ class Auth0Controller < ApplicationController
   end
 
   def user_info
-    # This stores all the user information that came from Auth0
+    # This stores all the user information that came from Cognito
     # and the IdP
     request.env['omniauth.auth']
   end
