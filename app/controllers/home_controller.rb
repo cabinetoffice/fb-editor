@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     @sign_in_url = if Rails.env.development?
                      '/auth/developer'
                    else
-                     '/auth/auth0'
+                     '/auth/cognito-idp'
                    end
   end
 end

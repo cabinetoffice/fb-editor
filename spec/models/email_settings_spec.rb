@@ -23,14 +23,14 @@ RSpec.describe EmailSettings do
 
       it 'allows whitelisted email domains' do
         should allow_values(
-          'frodo@digital.justice.gov.uk'
+          'frodo@digital.cabinet-office.gov.uk'
         ).for(:service_email_output)
       end
 
       it 'allows domains case insensitive' do
         should allow_values(
-          'frodo@digital.Justice.gov.uk'
-        ).for(:service_email_output)
+                 'frodo@digital.CABINET-OFFICE.gov.uk'
+               ).for(:service_email_output)
       end
 
       it 'do not allow malformed emails' do
