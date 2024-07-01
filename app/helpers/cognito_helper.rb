@@ -1,4 +1,4 @@
-module Auth0Helper
+module CognitoHelper
   # What's the current_user?
   # @return [Hash]
   def current_user

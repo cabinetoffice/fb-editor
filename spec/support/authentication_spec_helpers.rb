@@ -1,7 +1,7 @@
 module AuthenticationSpecHelpers
-  def auth0_userinfo(attributes = {})
+  def cognito_userinfo(attributes = {})
     user_info = {
-      'provider' => 'auth0',
+      'provider' => 'cognito',
       'uid' => 'google-oauth2|012345678900123456789',
       'info' => {
         'name' => 'John Smith',
@@ -11,9 +11,9 @@ module AuthenticationSpecHelpers
     OmniAuth::AuthHash.new(user_info)
   end
 
-  def stub_auth0_userinfo(user)
+  def stub_cognito_userinfo(user)
     OmniAuth.config.test_mode = true
-    OmniAuth.config.add_mock(:auth0, auth0_userinfo(user))
+    OmniAuth.config.add_mock(:cognito_idp, cognito_userinfo(user))
   end
 
   def stub_cookie_variable!(name, value)
@@ -33,7 +33,7 @@ module AuthenticationSpecHelpers
   end
 
   def login_as!(user)
-    stub_auth0_userinfo(user)
+    stub_cognito_userinfo(user)
     home.load
     home.sign_in.click
   end
