@@ -22,8 +22,8 @@ RSpec.describe ConfirmationEmailSettings do
 
       it 'allow emails' do
         should allow_values(
-          'frodo@digital.justice.gov.uk'
-        ).for(:confirmation_email_reply_to)
+                 'frodo@cabinetoffice.gov.uk'
+               ).for(:confirmation_email_reply_to)
       end
 
       it 'do not allow malformed emails' do

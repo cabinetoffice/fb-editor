@@ -28,9 +28,9 @@ Rails.application.routes.draw do
   get '/readiness', to: 'health#readiness'
   get '/metrics', to: 'metrics#show'
 
-  # Auth0 routes
-  get "/auth/auth0/callback", to: "auth0#callback", as: 'auth0_callback'
-  get "/auth/failure", to: "auth0#failure"
+  # Cognito routes
+  get "/auth/cognito-idp/callback", to: "cognito_idp#callback"
+  get "/auth/failure", to: "cognito_idp#failure"
 
   get '/signup_not_allowed', to: 'user_sessions#signup_not_allowed', as: 'signup_not_allowed'
   get '/signup_error/:error_type', to: 'user_sessions#signup_error', as: 'signup_error'
@@ -38,7 +38,7 @@ Rails.application.routes.draw do
   resource :user_session, only: [:destroy]
 
   if Rails.env.development?
-    post '/auth/developer/callback' => 'auth0#developer_callback'
+    post '/auth/developer/callback' => 'cognito_idp#developer_callback'
   end
 
   resources :services, only: [:index, :edit, :update, :create] do

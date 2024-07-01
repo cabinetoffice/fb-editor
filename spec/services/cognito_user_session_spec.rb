@@ -1,12 +1,12 @@
 require 'rails_helper'
 
-describe Auth0UserSession do
+describe CognitoUserSession do
   describe 'validation' do
-    context 'when the userinfo -> email ends in justice.gov.uk' do
+    context 'when the userinfo -> email ends in cabinet-office.gov.uk' do
       before do
         subject.user_info = {
           'info' => {
-            'email' => 'test-only@some-agency.justice.gov.uk'
+            'email' => 'test-only@some-agency.cabinetoffice.gov.uk'
           }
         }
       end

@@ -19,6 +19,15 @@ class AssertedIdentity
     )
   end
 
+  def self.from_cognito_userinfo(userinfo = {})
+    new(
+      uid: userinfo['uid'],
+      provider: userinfo['provider'],
+      name: humanised_name(userinfo),
+      email: userinfo['info'].try(:[], 'email')
+    )
+  end
+
   def self.humanised_name(userinfo)
     name = extract_name(userinfo)
     name.split('.').map(&:capitalize).join(' ').tr('0-9', '') if name

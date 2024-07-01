@@ -26,7 +26,7 @@ class UserPolicy
       UserService.add_identity!(existing_user, asserted_identity)
     end
 
-    Auth0UserSession.new(
+    CognitoUserSession.new(
       new_user: existing_user.blank?,
       user_id: existing_user.try(:id),
       user_info: userinfo
