@@ -1,6 +1,7 @@
 ALLOWED_DOMAINS = [
   'cabinetoffice.gov.uk',
   'digital.cabinet-office.gov.uk',
+  'csc.gov.uk',
   'yaml.farm'
 ].freeze
 
