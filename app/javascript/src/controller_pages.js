@@ -91,6 +91,10 @@ PagesController.edit = function() {
       editPageMultipleQuestionsViewCustomisations.call(view);
       break;
 
+    case "page.repeatablepage":
+      editPageContentViewCustomisations.call(view);
+      break;
+    
     case "page.singlequestion":
       editPageSingleQuestionViewCustomisations.call(view);
       break;

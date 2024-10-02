@@ -1,5 +1,5 @@
 UID ?= $(shell id -u)
-DOCKER_COMPOSE = env UID=$(UID) docker-compose -f docker-compose.yml -f docker-compose.development.yml
+DOCKER_COMPOSE = sudo env UID=$(UID) docker compose -f docker-compose.yml -f docker-compose.development.yml
 
 .PHONY: build
 build:
@@ -44,11 +44,11 @@ add-env-vars-ci:
 
 .PHONY: setup-ci
 setup-ci:
-	docker-compose -f docker-compose.ci.yml up -d --build editor_ci
+	docker compose -f docker-compose.ci.yml up -d --build editor_ci
 
 .PHONY: acceptance-ci
 acceptance-ci: copy-env-vars-ci add-env-vars-ci setup-ci
-	docker-compose -f docker-compose.ci.yml run --rm editor_ci bundle exec rspec -f doc acceptance
+	docker compose -f docker-compose.ci.yml run --rm editor_ci bundle exec rspec -f doc acceptance
 
 .PHONY: assets
 assets:

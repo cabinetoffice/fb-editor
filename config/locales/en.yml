@@ -4,8 +4,8 @@ en:
     hint: Question Hint
     question: Question
     section_heading: Section Heading
-    flow_thumbnail: 'Form page'
-    disabled_save_description: 'No changes to save'
+    flow_thumbnail: "Form page"
+    disabled_save_description: "No changes to save"
     page:
       start: Start page
       singlequestion: Single question page
@@ -18,36 +18,36 @@ en:
     warning: warning
     incomplete: incomplete
   default_text:
-    section_heading: '[Optional section heading]'
-    lede: '[Optional lede paragraph]'
-    body: '[Optional content]'
-    content: '[Optional content]'
-    hint: '[Optional hint text]'
-    option: 'Option'
-    option_hint: '[Optional hint text]'
+    section_heading: "[Optional section heading]"
+    lede: "[Optional lede paragraph]"
+    body: "[Optional content]"
+    content: "[Optional content]"
+    hint: "[Optional hint text]"
+    option: "Option"
+    option_hint: "[Optional hint text]"
   default_values:
-    service_email_output: ''
-    service_email_from: 'no-reply-moj-forms@digital.justice.gov.uk'
-    service_email_subject: 'Submission from %{service_name}{{reference_number_placeholder}}'
-    service_email_body: 'Please find attached a submission sent from %{service_name}. {{reference_number_placeholder}}'
-    service_email_pdf_heading: 'Submission for %{service_name} {{reference_number_placeholder}}'
-    service_email_pdf_subheading: ''
-    branching_title: 'Branching point %{branching_number}'
-    confirmation_email_reply_to: ''
+    service_email_output: ""
+    service_email_from: "no-reply-moj-forms@digital.justice.gov.uk"
+    service_email_subject: "Submission from %{service_name}{{reference_number_placeholder}}"
+    service_email_body: "Please find attached a submission sent from %{service_name}. {{reference_number_placeholder}}"
+    service_email_pdf_heading: "Submission for %{service_name} {{reference_number_placeholder}}"
+    service_email_pdf_subheading: ""
+    branching_title: "Branching point %{branching_number}"
+    confirmation_email_reply_to: ""
     confirmation_email_subject: "Your submission to ‘%{service_name}’{{reference_number_placeholder}}"
     confirmation_email_body: "Thank you for your submission to ‘%{service_name}’. {{reference_payment_placeholder}}\n\r\nYour answers are shown below and attached to this email."
     reference_number_sentence: "Your reference number is: {{reference_number}}."
     reference_number_subject: ", reference number: {{reference_number}}"
-    reference_number: '123-ABCD-456'
+    reference_number: "123-ABCD-456"
     reference_payment_sentence: "Your reference number is: {{reference_number}}.\n\r\nTo complete your submission, you now need to make the required payment at {{payment_link}}."
     save_and_return_email: "You have saved your progress with the form '%{service_name}'.<br /><br /><a href={{save_and_return_link}}>Continue with your form</a><br /><br />This link will only work once. If you want to save your progress again after resuming the form, you will need to repeat the save process and generate another link.<br /><br />The link is valid for 28 days. After that time, your saved information will be deleted."
-    service_output_json_endpoint: 'Enter the endpoint URL here'
-    service_output_json_key: 'Enter the endpoint key here'
+    service_output_json_endpoint: "Enter the endpoint URL here"
+    service_output_json_key: "Enter the endpoint key here"
   notification_banners:
     important: Important
     success: Success
     cookies:
-      heading:   "This page can’t be edited. You don’t need to do anything with it because we’ve taken care of it for you."
+      heading: "This page can’t be edited. You don’t need to do anything with it because we’ve taken care of it for you."
     privacy:
       heading: "You need to ensure you are following data protection requirements and complete this page before your form can go live. "
       link_text: "Learn more about data protection and privacy"
@@ -57,39 +57,39 @@ en:
       link_text: "Learn more about accessibility"
       link_href: "https://moj-forms.service.justice.gov.uk/accessibility/"
   dialogs:
-    button_cancel: 'Cancel'
-    button_delete: 'Delete'
-    button_delete_condition: 'Delete condition'
-    button_delete_branch: 'Delete branch'
-    button_delete_option: 'Delete option'
-    button_delete_component: 'Delete component'
-    button_delete_page: 'Delete page'
-    button_ok: 'OK'
-    button_understood: 'Understood'
-    button_update: 'Update'
+    button_cancel: "Cancel"
+    button_delete: "Delete"
+    button_delete_condition: "Delete condition"
+    button_delete_branch: "Delete branch"
+    button_delete_option: "Delete option"
+    button_delete_component: "Delete component"
+    button_delete_page: "Delete page"
+    button_ok: "OK"
+    button_understood: "Understood"
+    button_update: "Update"
     heading: General heading here
     heading_delete: 'Delete "%{label}"?'
-    heading_delete_no_default_next: 'You cannot delete this page yet'
+    heading_delete_no_default_next: "You cannot delete this page yet"
     heading_delete_branch: Delete branch?
     heading_delete_condtition: Delete condition?
     heading_delete_option: 'Delete the option "%{label}"?'
     message: General message here
-    message_delete: 'This cannot be undone'
-    message_delete_branch: 'This cannot be undone'
-    message_delete_condition: 'This cannot be undone'
+    message_delete: "This cannot be undone"
+    message_delete_branch: "This cannot be undone"
+    message_delete_condition: "This cannot be undone"
     destination:
       button_change: Change next page
-      label: 'Change next page'
+      label: "Change next page"
       lede: 'After: "%{title}"'
-      go_to: 'Go to: '
-      text: 'Any pages that are left without a connection to your form will be moved to the unconnected pages section.'
+      go_to: "Go to: "
+      text: "Any pages that are left without a connection to your form will be moved to the unconnected pages section."
     move:
       label: 'Move the page "%{title}"'
-      lede: 'Move to after:'
+      lede: "Move to after:"
       button: Move
-      you_cannot_move_this_page: 'You cannot move this page yet'
-      stacked_branches_not_supported_message: 'Moving this page would result in 2 branching points in a row, which is not currently possible. Try combining your branching rules into 1 branching point.'
-      branch_destination_no_default_next_message: 'You cannot leave a branch without any pages. Either edit the branching point or add another page to the branch first.'
+      you_cannot_move_this_page: "You cannot move this page yet"
+      stacked_branches_not_supported_message: "Moving this page would result in 2 branching points in a row, which is not currently possible. Try combining your branching rules into 1 branching point."
+      branch_destination_no_default_next_message: "You cannot leave a branch without any pages. Either edit the branching point or add another page to the branch first."
     undo_redo_error:
       heading: There was a problem
       content: We were unable to complete your last action.
@@ -125,8 +125,8 @@ en:
           label: Maximum answer length
           status_label: Set a maximum answer length
       max_files:
-        label: 'Maximum number of files that can be uploaded'
-        hint: 'Set a limit for this page of between 1 and 10 files'
+        label: "Maximum number of files that can be uploaded"
+        hint: "Set a limit for this page of between 1 and 10 files"
       button: Update
     autocomplete:
       legend: Upload autocomplete options
@@ -152,7 +152,7 @@ en:
       send_feedback: "Feedback"
       home_url: "https://moj-forms.service.justice.gov.uk/"
       user_guide_url: "https://moj-forms.service.justice.gov.uk/user-guide/"
-      user_guide_check_confirm_url: 'https://moj-forms.service.justice.gov.uk/building-and-editing/#check-confirm'
+      user_guide_check_confirm_url: "https://moj-forms.service.justice.gov.uk/building-and-editing/#check-confirm"
       feedback_form_url: "https://mojf-in-service-feedback-form.form.service.justice.gov.uk"
   home:
     show:
@@ -172,205 +172,206 @@ en:
       sign_in: Sign in
   auth:
     existing_user:
-      welcome_html: 'Signed in successfully'
+      welcome_html: "Signed in successfully"
     signup_error:
-      heading: 'Error signing up'
-      body: 'Unable to signup'
+      heading: "Error signing up"
+      body: "Unable to signup"
     signup_not_allowed:
-      heading: 'Unable to sign in'
-      body: 'You cannot sign in with that email address'
+      heading: "Unable to sign in"
+      body: "You cannot sign in with that email address"
     unauthorised:
       heading: You don't have access to that page
       body: Contact the form owner or the Gov Returns team for help.
   actions:
-    back: 'Back'
-    edit: 'Edit'
-    save: 'Save'
-    saving: 'Saving...'
-    saved: 'Saved'
-    continue: 'Continue'
-    cancel: 'Cancel'
-    publish_to_test: 'Publish to Test'
-    publish_to_live: 'Publish to Live'
-    add_branch: 'Add branching'
-    edit_branch: 'Edit branching'
-    edit_page: 'Edit page'
-    preview_page: 'Preview page'
-    preview_form: 'Preview form'
-    delete_branch: 'Delete branching...'
-    delete_page: 'Delete page...'
-    option_add: 'Add option'
-    option_remove: 'Delete...'
-    change_destination: 'Change next page...'
-    move_page: 'Move page...'
-    add_single_question: 'Add single question page'
-    add_multi_question: 'Add multiple question page'
-    add_content: 'Add content page'
-    add_exit: 'Add exit page'
-    add_check_answers: 'Add check answers page'
-    add_confirmation: 'Add confirmation page'
-    reconnect_confirmation: 'Reconnect confirmation page'
-    ok: 'OK'
-    submit: 'Submit'
+    back: "Back"
+    edit: "Edit"
+    save: "Save"
+    saving: "Saving..."
+    saved: "Saved"
+    continue: "Continue"
+    cancel: "Cancel"
+    publish_to_test: "Publish to Test"
+    publish_to_live: "Publish to Live"
+    add_branch: "Add branching"
+    edit_branch: "Edit branching"
+    edit_page: "Edit page"
+    preview_page: "Preview page"
+    preview_form: "Preview form"
+    delete_branch: "Delete branching..."
+    delete_page: "Delete page..."
+    option_add: "Add option"
+    option_remove: "Delete..."
+    change_destination: "Change next page..."
+    move_page: "Move page..."
+    add_single_question: "Add single question page"
+    add_multi_question: "Add multiple question page"
+    add_content: "Add content page"
+    add_exit: "Add exit page"
+    add_check_answers: "Add check answers page"
+    add_confirmation: "Add confirmation page"
+    reconnect_confirmation: "Reconnect confirmation page"
+    ok: "OK"
+    submit: "Submit"
     upload_options: Upload options
-    open_in_new_window: '(opens in a new window)'
+    open_in_new_window: "(opens in a new window)"
     undo_redo:
-      undo_change_next_page: 'Undo change next page'
-      undo_move: 'Undo move'
-      redo_change_next_page: 'Redo change next page'
-      redo_move: 'Redo move'
+      undo_change_next_page: "Undo change next page"
+      undo_move: "Undo move"
+      redo_change_next_page: "Redo change next page"
+      redo_move: "Redo move"
   branches:
-    branch_add: 'Add another branch'
-    branch_edit: 'Edit branch'
-    branch_remove: 'Delete...'
-    condition_add: 'Add condition'
-    condition_remove: 'Remove condition'
+    branch_add: "Add another branch"
+    branch_edit: "Edit branch"
+    branch_remove: "Delete..."
+    condition_add: "Add condition"
+    condition_remove: "Remove condition"
     after: After "%{page_title}"
     expression:
-      if: 'If'
-      and: 'And'
+      if: "If"
+      and: "And"
     goto: Go to
-    select_destination: '--- Select next page ---'
-    select_question: '-- Select a question --'
-    conditional_title: 'Branch '
-    title_otherwise: 'Otherwise,'
-    hint_otherwise: 'if none of the above'
-    detached_list: 'Unconnected page'
+    select_destination: "--- Select next page ---"
+    select_question: "-- Select a question --"
+    conditional_title: "Branch "
+    title_otherwise: "Otherwise,"
+    hint_otherwise: "if none of the above"
+    detached_list: "Unconnected page"
     delete_modal:
-      destinations: 'Go to:'
-      lede: 'Choose which branch you want to keep in your form.'
-      before_submit: 'Any pages that are left without a connection to your form will be moved to the unconnected pages section.'
-      submit: 'Delete branching point'
+      destinations: "Go to:"
+      lede: "Choose which branch you want to keep in your form."
+      before_submit: "Any pages that are left without a connection to your form will be moved to the unconnected pages section."
+      submit: "Delete branching point"
   conditional_content:
     heading: Show this content...
     show_if_button_label: Shows if...
     hidden_button_label: Hidden
     display:
-      always: 'Always'
-      conditional: 'Only if...'
-      never: 'Never'
-    add_another_rule: 'Add another rule'
-    add_condition: 'Add condition'
+      always: "Always"
+      conditional: "Only if..."
+      never: "Never"
+    add_another_rule: "Add another rule"
+    add_condition: "Add condition"
   questions:
     delete_modal:
-      can_not_delete_heading: 'You cannot delete this question yet'
-      delete_question_used_for_branching_message: 'You cannot delete this question because it is used in a branching condition. Update the branching point first.'
+      can_not_delete_heading: "You cannot delete this question yet"
+      delete_question_used_for_branching_message: "You cannot delete this question because it is used in a branching condition. Update the branching point first."
       delete_question_used_for_conditional_content_message_single: "You cannot delete this question because it is used in a content area visibility rule on the page '%{title}'"
       delete_question_used_for_conditional_content_message_multiple: "You cannot delete this question because it is used in content area visibility rules on the following pages:"
-      can_not_delete_message_confirmation_email: 'You cannot delete this question because it is required by the confirmation email. Update the email settings first.'
+      can_not_delete_message_confirmation_email: "You cannot delete this question because it is required by the confirmation email. Update the email settings first."
   question_items:
     delete_modal:
-      can_not_delete_heading: 'You cannot delete this option yet'
-      delete_option_used_for_branching_message: 'You cannot delete this option because it is used in a branching condition. Update the branching point first, then try again.'
+      can_not_delete_heading: "You cannot delete this option yet"
+      delete_option_used_for_branching_message: "You cannot delete this option because it is used in a branching condition. Update the branching point first, then try again."
       delete_option_used_for_conditional_content_message_single: "You cannot delete this option because it is used in a content area visibility rule on the page '%{title}'"
       delete_option_used_for_conditional_content_message_multiple: "You cannot delete this option because it is used in content area visibility rules on the following pages:"
     min_items_modal:
-      can_not_delete_radios_message: 'Radio buttons require a minimum of 2 options'
-      can_not_delete_checkboxes_message: 'Checkboxes require a minimum of 1 option'
+      can_not_delete_radios_message: "Radio buttons require a minimum of 2 options"
+      can_not_delete_checkboxes_message: "Checkboxes require a minimum of 1 option"
   pages:
     flow:
-      heading: 'Pages flow'
-      detached: 'Unconnected pages'
-      reconnect_hint: 'How do I reconnect these?'
+      heading: "Pages flow"
+      detached: "Unconnected pages"
+      reconnect_hint: "How do I reconnect these?"
       page_types:
-        start: 'Start page'
-        singlequestion: 'Single question page'
-        multiplequestions: 'Single question page'
-        content: 'Content page'
-        exit: 'Exit page'
-        checkanswers: 'Check your answers page'
-        confirmation: 'Confirmation page'
-    name: 'Pages'
-    create: 'Add page'
-    cancel: 'Cancel'
+        start: "Start page"
+        singlequestion: "Single question page"
+        multiplequestions: "Single question page"
+        content: "Content page"
+        exit: "Exit page"
+        checkanswers: "Check your answers page"
+        confirmation: "Confirmation page"
+    name: "Pages"
+    create: "Add page"
+    cancel: "Cancel"
     flow_page_menu_label: "Actions for page %{title}"
     flow_branch_menu_label: "Actions for %{title}"
     connection_menu_label: "Actions for connection between pages %{source}"
-    footer: 'Form footer'
+    footer: "Form footer"
     delete_modal:
       delete_page: 'Deletes "%{title}"'
-      delete_branch_destination_page_message: 'One of your branches leads to this page. We will update the branching point to lead to the next page in your flow.'
-      delete_branch_destination_page_no_default_next_message: 'You cannot leave a branch without any pages. Either edit the branching point or add another page to the branch first.'
-      delete_and_update_branching: 'Delete and update branching'
-      you_cannot_delete_this_page: 'You cannot delete this page yet'
-      delete_page_used_for_branching_not_supported_message: 'You cannot delete this page because it is used in a branching condition. Update the branching point first.'
+      delete_branch_destination_page_message: "One of your branches leads to this page. We will update the branching point to lead to the next page in your flow."
+      delete_branch_destination_page_no_default_next_message: "You cannot leave a branch without any pages. Either edit the branching point or add another page to the branch first."
+      delete_and_update_branching: "Delete and update branching"
+      you_cannot_delete_this_page: "You cannot delete this page yet"
+      delete_page_used_for_branching_not_supported_message: "You cannot delete this page because it is used in a branching condition. Update the branching point first."
       delete_page_used_for_conditional_content_message_single: "You cannot delete this page because it is used in a content area visibility rule on the page '%{title}'"
       delete_page_used_for_conditional_content_message_multiple: "You cannot delete this page because it is used in content area visibility rules on the following pages:"
       update_content_area: "You will need to update the content area first."
       update_content_areas: "You will need to update the content areas first."
-      stack_branches_not_supported_message: 'Deleting this page would result in 2 branching points in a row, which is not currently possible. Try combining your branching rules into 1 branching point.'
-      can_not_delete_email_page_heading: 'You cannot delete this page yet'
-      can_not_delete_email_page_message: 'You cannot delete this page because it is required by the confirmation email. Update the email settings first.'
-      go_to_email_settings: 'Go to email settings'
+      stack_branches_not_supported_message: "Deleting this page would result in 2 branching points in a row, which is not currently possible. Try combining your branching rules into 1 branching point."
+      can_not_delete_email_page_heading: "You cannot delete this page yet"
+      can_not_delete_email_page_message: "You cannot delete this page because it is required by the confirmation email. Update the email settings first."
+      go_to_email_settings: "Go to email settings"
     destination:
-      heading: 'Change destination'
-      lede: 'Update this connection to lead to the following page:'
-      hint: 'The page that was previously following (and attached to it) will be moved to the unconnected pages'
-      submit: 'Change destination'
-      cancel: 'Cancel'
+      heading: "Change destination"
+      lede: "Update this connection to lead to the following page:"
+      hint: "The page that was previously following (and attached to it) will be moved to the unconnected pages"
+      submit: "Change destination"
+      cancel: "Cancel"
   components:
     list:
-      text: 'Text'
-      textarea: 'Textarea'
-      email: 'Email address'
-      number: 'Number'
-      date: 'Date'
-      radios: 'Radio buttons'
-      checkboxes: 'Checkboxes'
-      upload: 'File upload'
-      multi_upload: 'Multiple File upload'
-      autocomplete: 'Autocomplete'
+      text: "Text"
+      textarea: "Textarea"
+      email: "Email address"
+      number: "Number"
+      arultext: "ArulText"
+      date: "Date"
+      radios: "Radio buttons"
+      checkboxes: "Checkboxes"
+      upload: "File upload"
+      multi_upload: "Multiple File upload"
+      autocomplete: "Autocomplete"
     actions:
-      add_component: 'Add component'
-      add_content: 'Add content area'
+      add_component: "Add component"
+      add_content: "Add content area"
     menu:
-      question: 'Question'
-      content_area: 'Content area'
+      question: "Question"
+      content_area: "Content area"
   content:
     menu:
-      activator: 'Settings'
-      remove: 'Delete...'
-      show_if: 'Show if...'
+      activator: "Settings"
+      remove: "Delete..."
+      show_if: "Show if..."
     dialog:
       heading_remove: "Delete the component?"
-      affirmative: 'Yes'
-      negative: 'No'
+      affirmative: "Yes"
+      negative: "No"
       conditional:
         heading: Show this component...
   question:
-    optional_flag: '(optional)'
+    optional_flag: "(optional)"
     menu:
-      activator: 'Properties'
-      remove: 'Delete...'
-      required: 'Required...'
-      date_after: 'Earliest date...'
-      date_before: 'Latest date...'
-      minimum: 'Minimum answer value...'
-      maximum: 'Maximum answer value...'
-      max_string_length: 'Maximum answer length...'
-      min_string_length: 'Minimum answer length...'
-      upload_options: 'Autocomplete options...'
-      max_files: 'Number of files...'
+      activator: "Properties"
+      remove: "Delete..."
+      required: "Required..."
+      date_after: "Earliest date..."
+      date_before: "Latest date..."
+      minimum: "Minimum answer value..."
+      maximum: "Maximum answer value..."
+      max_string_length: "Maximum answer length..."
+      min_string_length: "Minimum answer length..."
+      upload_options: "Autocomplete options..."
+      max_files: "Number of files..."
     dialog:
       heading_remove: Delete the component '#{label}'?
-      heading_required: 'Is answering this question required?'
-      affirmative: 'Yes'
-      negative: 'No'
-      multiupload_label: 'Maximum number of files that can be uploaded'
-      multiupload_hint: 'Set a limit for this page of between 1 and 10 files'
-      multiupload_continue: 'Update'
+      heading_required: "Is answering this question required?"
+      affirmative: "Yes"
+      negative: "No"
+      multiupload_label: "Maximum number of files that can be uploaded"
+      multiupload_hint: "Set a limit for this page of between 1 and 10 files"
+      multiupload_continue: "Update"
   settings:
-    name: 'Settings'
+    name: "Settings"
     form_name:
-      heading: 'Form name and URL'
+      heading: "Form name and URL"
       lede: Manage your form's name and URL.
       help: Additional guidance for URL is available on
       form_name:
-        label: 'Form name'
+        label: "Form name"
         lede: This appears in the header of all your form pages and is what your form is listed as in the Gov Returns editor. A good name describes the task the form is designed for and starts with an action, such as "Get help with..." or "Apply for..." %{href}.
         href: <a class="govuk-link" href="https://moj-forms.service.justice.gov.uk/settings" target="_blank" rel="noopener noreferrer">Learn more about naming a form</a>
       form_slug:
-        label: 'URL'
+        label: "URL"
         lede: "This will be your form's web address when it goes live. The URL should be easy to read and closely resemble your form name. Words should be in lower case and separated with hyphens. %{href}.<br /><br />Changing a live form's URL can cause problems for users so this option is only available before a form has been published to Live."
         lede_live: "This is your form's live web address. The URL should be easy to read and closely resemble your form name. Words should be in lower case and separated with hyphens. %{href}.<br /><br />As your form is now live, you cannot change your URL here. %{contact_us} to discuss changing your URL."
         contact_us: <a class="govuk-link" href="https://moj-forms.service.justice.gov.uk/contact" target="_blank" rel="noopener noreferrer">Contact us</a>
@@ -379,7 +380,7 @@ en:
         domain: .form.service.justice.gov.uk
     form_analytics:
       heading: Google Analytics
-      lede:  Monitor your form's performance (requires a Google Analytics account).
+      lede: Monitor your form's performance (requires a Google Analytics account).
       description: This inserts tracking code in your form, allowing you to view performance metrics in Google Analytics. It requires your own Google Analytics account and at least one tracking ID.
       test:
         heading: Test site
@@ -388,7 +389,7 @@ en:
         heading: Live site
         description: Where the public can access and use your form.
       details: Configure
-      details_hint: 'You can use tracking IDs for any of the following Google products:'
+      details_hint: "You can use tracking IDs for any of the following Google products:"
     reference_payment:
       link: Reference numbers and GOV.UK Pay
       heading: Reference numbers and GOV.UK Pay
@@ -408,20 +409,20 @@ en:
       legend: GOV.UK Pay payment links
       hint: This adds a reference number to a GOV.UK Pay payment link and inserts it in the confirmation page and confirmation email. (Requires a %{href}.)
       href: <a class="govuk-link" href="%{url}" target="_blank" rel="noopener noreferrer">GOV.UK Pay account</a>
-      url: 'https://www.payments.service.gov.uk/'
+      url: "https://www.payments.service.gov.uk/"
       checkbox_label: Add payment links with reference numbers
       url_label: Your GOV.UK Pay payment link URL
     save_and_return:
-      heading: 'Save for later'
-      lede: 'Give users the option of saving a partially completed form.'
-      description: 'Give users the option of saving a partially completed form for up to 28 days.'
-      page_lede: 'This places a save button at the bottom of each page of your form which will lead users through the save process. For details, see the %{href}'
+      heading: "Save for later"
+      lede: "Give users the option of saving a partially completed form."
+      description: "Give users the option of saving a partially completed form for up to 28 days."
+      page_lede: "This places a save button at the bottom of each page of your form which will lead users through the save process. For details, see the %{href}"
       href: <a class="govuk-link" href="https://moj-forms.service.justice.gov.uk/settings/#save-for-later" target="_blank" rel="noopener noreferrer">user guide section on save for later.</a>
       label: Enable save for later
     submission:
-      heading: 'Submission settings'
-      lede: 'Set what happens when a user submits their data.'
-      description: 'Use these settings to control what happens when a user submits the form on Test or Live.'
+      heading: "Submission settings"
+      lede: "Set what happens when a user submits their data."
+      description: "Use these settings to control what happens when a user submits the form on Test or Live."
       dev:
         config_details_summary: Configure <span class="sr-only">test settings</span>
         save_button: Save Test settings
@@ -429,151 +430,151 @@ en:
         config_details_summary: Configure <span class="sr-only">live settings</span>
         save_button: Save Live settings
     collection_email:
-      heading: 'Collect information by email'
-      lede: 'Receive your form data in PDF and CSV attached to emails.'
-      description: 'Receive your form data in PDF and CSV attached to emails.'
+      heading: "Collect information by email"
+      lede: "Receive your form data in PDF and CSV attached to emails."
+      description: "Receive your form data in PDF and CSV attached to emails."
     confirmation_email:
-      heading: 'Send a confirmation email'
+      heading: "Send a confirmation email"
       lede: Send the people who complete your form a copy of their data.
       description: Send the people completing your form a confirmation email with a copy of their answers.
   warnings:
     confirmation_email:
-      message: 'Your form must include an email question to enable a %{href}.'
+      message: "Your form must include an email question to enable a %{href}."
       link_text: confirmation email
-      link_url: 'https://moj-forms.service.justice.gov.uk/settings/#confirmation-email'
+      link_url: "https://moj-forms.service.justice.gov.uk/settings/#confirmation-email"
     submission_pages:
       dev:
-        both_pages: 'it is missing a %{href}'
-        cya_page: 'it is missing a %{href}'
-        confirmation_page: ' it is missing a %{href}'
+        both_pages: "it is missing a %{href}"
+        cya_page: "it is missing a %{href}"
+        confirmation_page: " it is missing a %{href}"
       production:
-        both_pages: 'add a %{href}'
-        cya_page: 'add a %{href}'
-        confirmation_page: 'add a %{href}'
+        both_pages: "add a %{href}"
+        cya_page: "add a %{href}"
+        confirmation_page: "add a %{href}"
       link:
-        both_pages: 'check answers page and confirmation page'
-        cya_page: 'check answers page'
-        confirmation_page: 'confirmation page'
+        both_pages: "check answers page and confirmation page"
+        cya_page: "check answers page"
+        confirmation_page: "confirmation page"
     pages_flow:
-      both_pages: 'You won’t receive any user data without a check answers page and a confirmation page'
-      cya_page: 'You won’t receive any user data without a check answers page'
-      confirmation_page: 'You won’t receive any user data without a confirmation page'
+      both_pages: "You won’t receive any user data without a check answers page and a confirmation page"
+      cya_page: "You won’t receive any user data without a check answers page"
+      confirmation_page: "You won’t receive any user data without a confirmation page"
     publish:
       dev:
-        icon_fallback: 'Warning'
-        heading: 'Your form will not send any user submissions because:'
+        icon_fallback: "Warning"
+        heading: "Your form will not send any user submissions because:"
       production:
-        icon_fallback: 'Error'
-        heading: 'Before you can publish to Live you must:'
+        icon_fallback: "Error"
+        heading: "Before you can publish to Live you must:"
     email_settings:
       default: You need to set and validate a team email address.
       pending: You need to validate this email address.
   publish:
-    name: 'Publishing'
-    heading: 'Publishing'
-    first_publish_warning: 'Your form is being published. It may take 15 minutes for the link below to work. Future updates will happen straight away.'
-    first_publish_success: 'Your form has been published.'
+    name: "Publishing"
+    heading: "Publishing"
+    first_publish_warning: "Your form is being published. It may take 15 minutes for the link below to work. Future updates will happen straight away."
+    first_publish_success: "Your form has been published."
     publish_for_review:
       info:
-        heading: 'Unlock publishing to Live'
-        content: 'You need to apply to %{href}. This can take up to 3 working days. You should only do this when you think your form is ready.'
-        content_2: 'We will check your form against the Gov Returns terms of use and let you know when publishing is unlocked.'
-        link_text: 'unlock the ability to publish to Live'
-        link_url: 'https://moj-forms.service.justice.gov.uk/testing-and-publishing/#final-check'
-      button: 'Apply to unlock publishing'
+        heading: "Unlock publishing to Live"
+        content: "You need to apply to %{href}. This can take up to 3 working days. You should only do this when you think your form is ready."
+        content_2: "We will check your form against the Gov Returns terms of use and let you know when publishing is unlocked."
+        link_text: "unlock the ability to publish to Live"
+        link_url: "https://moj-forms.service.justice.gov.uk/testing-and-publishing/#final-check"
+      button: "Apply to unlock publishing"
       confirmation:
-        heading: 'We are reviewing your request to unlock publishing'
-        subheading: 'What happens next?'
-        text_1: 'A member of the Gov Returns team will review your form against the terms of use to confirm it is ready to go live.'
-        text_2: 'This can take up to 3 working days.'
-        ul: 'We will then either:'
-        li_1: 'unlock your ability to publish to Live and let you know by email'
-        li_2: 'contact you to discuss any issues'
-        text_3: 'Once publishing is unlocked, you will be able to return to this page to publish your form to Live.'
-        text_4: '%{href} if you have any questions or concerns about this process.'
-        text_4_link_text: 'Contact us'
-        text_4_link_ref: 'https://moj-forms.service.justice.gov.uk/contact/'
+        heading: "We are reviewing your request to unlock publishing"
+        subheading: "What happens next?"
+        text_1: "A member of the Gov Returns team will review your form against the terms of use to confirm it is ready to go live."
+        text_2: "This can take up to 3 working days."
+        ul: "We will then either:"
+        li_1: "unlock your ability to publish to Live and let you know by email"
+        li_2: "contact you to discuss any issues"
+        text_3: "Once publishing is unlocked, you will be able to return to this page to publish your form to Live."
+        text_4: "%{href} if you have any questions or concerns about this process."
+        text_4_link_text: "Contact us"
+        text_4_link_ref: "https://moj-forms.service.justice.gov.uk/contact/"
     declarations:
-      label: 'Confirm you have taken the following actions to unlock publishing'
-      error: 'Check all of the statements to confirm you have read them and taken the appropriate actions.'
-      one: 'I have read the %{href} and taken any appropriate actions for my form'
-      one_link_text: 'guidance on assessments'
-      one_link_ref: 'https://moj-forms.service.justice.gov.uk/getting-started/#assessment'
+      label: "Confirm you have taken the following actions to unlock publishing"
+      error: "Check all of the statements to confirm you have read them and taken the appropriate actions."
+      one: "I have read the %{href} and taken any appropriate actions for my form"
+      one_link_text: "guidance on assessments"
+      one_link_ref: "https://moj-forms.service.justice.gov.uk/getting-started/#assessment"
       two: "I taken the %{href} into account and completed my form's accessibility statement"
-      two_link_text: 'accessibility guidance'
-      two_link_ref: 'https://moj-forms.service.justice.gov.uk/accessibility/'
+      two_link_text: "accessibility guidance"
+      two_link_ref: "https://moj-forms.service.justice.gov.uk/accessibility/"
       three: "I have read the %{href} and completed my form's privacy statement"
-      three_link_text: 'guidance on data protection'
-      three_link_ref: 'https://moj-forms.service.justice.gov.uk/data-protection/'
-      four: 'I have tested my form and confirmed that it works as intended and is sending responses correctly (%{href})'
-      four_link_text: 'advice on testing your form'
-      four_link_ref: 'https://moj-forms.service.justice.gov.uk/testing-and-publishing/#test-checks'
-      five: 'I have checked and confirmed all %{href} for the Live site are correct'
-      five_link_text: 'settings'
-      five_link_ref: 'https://moj-forms.service.justice.gov.uk/settings/'
-      six: 'I have read and agree to the %{href}'
-      six_link_text: 'Gov Returns Terms of use'
-      six_link_ref: 'https://moj-forms.service.justice.gov.uk/terms-of-use/'
+      three_link_text: "guidance on data protection"
+      three_link_ref: "https://moj-forms.service.justice.gov.uk/data-protection/"
+      four: "I have tested my form and confirmed that it works as intended and is sending responses correctly (%{href})"
+      four_link_text: "advice on testing your form"
+      four_link_ref: "https://moj-forms.service.justice.gov.uk/testing-and-publishing/#test-checks"
+      five: "I have checked and confirmed all %{href} for the Live site are correct"
+      five_link_text: "settings"
+      five_link_ref: "https://moj-forms.service.justice.gov.uk/settings/"
+      six: "I have read and agree to the %{href}"
+      six_link_text: "Gov Returns Terms of use"
+      six_link_ref: "https://moj-forms.service.justice.gov.uk/terms-of-use/"
     autocomplete_items:
       dev:
-        icon_fallback: 'Warning'
-        message: '“%{title}” has no autocomplete options and cannot be answered.'
+        icon_fallback: "Warning"
+        message: "“%{title}” has no autocomplete options and cannot be answered."
       production:
-        icon_fallback: 'Error'
-        message: 'upload some autocomplete options for “%{title}”'
+        icon_fallback: "Error"
+        message: "upload some autocomplete options for “%{title}”"
     environment:
       dev: Test
       production: Live
     service_output:
       icon_fallback: Warning
-      default: 'Your form will not send any user submissions until you enable %{link}.'
-      confirmation_email: 'Your form will not send any user submissions or confirmation emails until you enable %{link}.'
+      default: "Your form will not send any user submissions until you enable %{link}."
+      confirmation_email: "Your form will not send any user submissions or confirmation emails until you enable %{link}."
       link_text: collecting information by email
     dialog:
       heading: Publish to Test?
       option_1: Allow anyone with the link to view
       option_2: Set a username and password
       alert_heading: Your form is being published
-      alert_text: 'It may take up to 15 minutes for your link to work.<br />Future updates will happen straight away.'
+      alert_text: "It may take up to 15 minutes for your link to work.<br />Future updates will happen straight away."
       alert_button: I understand
     dev:
       button: Publish to Test
-      heading: 'Test site'
-      description: 'Where you can check your form works and get feedback.'
-      version: 'Version: Latest  -'
-      by: 'by %{name}'
-      hint: 'Where you can check your form works and get feedback.'
-      inset_text_label: 'Is your form ready to go live?'
+      heading: "Test site"
+      description: "Where you can check your form works and get feedback."
+      version: "Version: Latest  -"
+      by: "by %{name}"
+      hint: "Where you can check your form works and get feedback."
+      inset_text_label: "Is your form ready to go live?"
       inset_text_html: "You will need to apply to unlock the ability to publish to Live. This can take up to 3 working days. Go to <a href='#publish-to-live'>Publish to Live</a> to find out more."
-      inset_text_link_text: 'final check'
-      inset_text_href:  'https://formbuilder-product-page-staging.apps.live.cloud-platform.service.justice.gov.uk/testing-and-publishing/#final-check'
+      inset_text_link_text: "final check"
+      inset_text_href: "https://formbuilder-product-page-staging.apps.live.cloud-platform.service.justice.gov.uk/testing-and-publishing/#final-check"
     production:
       button: Publish to Live
-      heading: 'Live site'
-      description: 'Where the public can access and use your form.'
-      version: 'Version: Latest  -'
-      by: 'by %{name}'
-      hint: 'Where the public can access and use your form.'
+      heading: "Live site"
+      description: "Where the public can access and use your form."
+      version: "Version: Latest  -"
+      by: "by %{name}"
+      hint: "Where the public can access and use your form."
   services:
-    heading: 'Your forms'
-    edit: 'Edit'
+    heading: "Your forms"
+    edit: "Edit"
     form_name_hint: "Maximum %{max_length} characters, including spaces. It cannot start with a number or include special characters except ' - ( )"
     form_name_change_hint: "You will be able to change this later in your form's settings"
-    preview: 'Preview'
-    create: 'Create a new form'
-    cancel: 'Cancel'
-    branch: 'Add branching'
+    preview: "Preview"
+    create: "Create a new form"
+    cancel: "Cancel"
+    branch: "Add branching"
   activemodel:
     models:
-      service_creation: 'Form'
+      service_creation: "Form"
     attributes:
       service_creation:
-        service_name: 'Give your form a name'
+        service_name: "Give your form a name"
       settings:
-        service_name: 'Form name'
+        service_name: "Form name"
       form_name_url_settings:
-        service_name: 'Form name'
-        service_slug: 'URL'
+        service_name: "Form name"
+        service_slug: "URL"
       form_analytics_settings:
         enabled_test: Enable analytics on Test
         enabled_live: Enable analytics on Live
@@ -595,7 +596,7 @@ en:
         send_by_email_production: Enable email on Live
         service_email_output: To
         service_email_output_hint: This must be a CO email address or other approved address
-        service_email_from: 'From:'
+        service_email_from: "From:"
         service_email_subject: Subject
         service_email_body: Message
         service_email_pdf_heading: PDF heading
@@ -619,15 +620,15 @@ en:
         page_url: "Give your page a short name"
         page_url_hint: "This will form the page’s URL so should be in lower case with no spaces"
       publish_service_creation:
-        allow_anonymous: 'Allow anyone with the link to view'
-        require_authentication: 'Set a username and password'
-        test_title: 'Publish to Test site'
-        live_title: 'Publish to Live site'
-        description: 'You need to set a username and password for your form, which you can share with trusted contacts'
-        username: 'Create a username'
-        username_hint: 'Your username must be at least 6 characters long'
-        password: 'Create a password'
-        password_hint: 'Your password must be at least 6 characters long'
+        allow_anonymous: "Allow anyone with the link to view"
+        require_authentication: "Set a username and password"
+        test_title: "Publish to Test site"
+        live_title: "Publish to Live site"
+        description: "You need to set a username and password for your form, which you can share with trusted contacts"
+        username: "Create a username"
+        username_hint: "Your username must be at least 6 characters long"
+        password: "Create a password"
+        password_hint: "Your password must be at least 6 characters long"
       branch:
         default_next: Otherwise
     errors:
@@ -636,15 +637,15 @@ en:
         from_address:
           invalid: Enter an email address in the correct format, like name@example.com
         publish_service_creation:
-          blank_username: 'Enter a username'
-          blank_password: 'Enter a password'
-          username_too_short: 'Username must be at least 6 characters'
-          password_too_short: 'Password must be at least 6 characters'
+          blank_username: "Enter a username"
+          blank_password: "Enter a password"
+          username_too_short: "Username must be at least 6 characters"
+          password_too_short: "Password must be at least 6 characters"
         page_creation:
           taken: "You already have a page with that name"
           reserved: "That name is used for something else"
           has_space: "Your page name cannot include spaces"
-          has_special_chars:  "Your page name cannot include special characters other than hyphens (-)"
+          has_special_chars: "Your page name cannot include special characters other than hyphens (-)"
         branch:
           blank: "Select a destination for '%{attribute}'"
         conditional:
@@ -683,16 +684,16 @@ en:
           format: "%{message}"
           virus_found: "'%{attribute}' contains a virus - choose a different file"
           too_big: "The selected file must be smaller than 1MB"
-          scan_error:  There was a problem with the file upload - try again later
+          scan_error: There was a problem with the file upload - try again later
           empty_value_cell: "The selected file cannot contain blank fields"
           invalid_headings: "The selected file's header fields must be labelled correctly"
         reference_payment_settings:
-          reference_number_disabled: 'You must enable reference numbers before you can add a payment link'
-          missing_payment_link: 'Enter your GOV.UK Pay payment link URL (you get this from your GOV.UK Pay account)'
-          invalid_payment_url: "Enter a valid GOV.UK Pay payment link URL starting with \"%{link_start_with}\""
-          link_start_with: 'https://www.gov.uk/payments/'
+          reference_number_disabled: "You must enable reference numbers before you can add a payment link"
+          missing_payment_link: "Enter your GOV.UK Pay payment link URL (you get this from your GOV.UK Pay account)"
+          invalid_payment_url: 'Enter a valid GOV.UK Pay payment link URL starting with "%{link_start_with}"'
+          link_start_with: "https://www.gov.uk/payments/"
         email_settings:
-          domain_invalid: 'The address you want to send the email to must be a CO email address or other approved address.'
+          domain_invalid: "The address you want to send the email to must be a CO email address or other approved address."
           blank: Enter a to email address
           invalid: Enter an email address in the correct format, like name@example.com
         confirmation_email_settings:
@@ -715,13 +716,13 @@ en:
         too_long: "%{attribute} must be %{count} characters or fewer"
         invalid: "Your answer for ‘%{attribute}' contains characters that are not allowed."
         taken: "Your answer for ‘%{attribute}' is already used by another form. Please modify it."
-        unprocessable: 'There is an error in the metadata. Please try again and if the error persists contact us in the #ask-formbuilder channel'
+        unprocessable: "There is an error in the metadata. Please try again and if the error persists contact us in the #ask-formbuilder channel"
         unsupported: This type of question is not currently supported to create a branching condition. Please select a radio button or checkbox question.
   time:
     formats:
-      simple: '%d/%m/%Y %H:%M:%S'
-      date: '%d/%m/%Y'
-      time: '%H:%M:%S'
+      simple: "%d/%m/%Y %H:%M:%S"
+      date: "%d/%m/%Y"
+      time: "%H:%M:%S"
   operators:
     is: is
     is_not: is not

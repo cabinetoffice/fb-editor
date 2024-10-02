@@ -44,6 +44,7 @@ const constants = {
 
   TEXT_PAGE_TYPE_MULTI: "multiplequestions",
   TEXT_PAGE_TYPE_CONTENT: "content",
+  TEXT_PAGE_TYPE_REPEAT: "repeatablepage",
   TEXT_PAGE_TYPE_EXIT: "exit",
 
   TEXT_ACTION_NONE: "none",

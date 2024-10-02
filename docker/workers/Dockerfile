@@ -17,6 +17,10 @@ RUN chown appuser:appgroup /bin/kubectl
 
 WORKDIR /app
 
+COPY fb-metadata-presenter ../fb-metadata-presenter
+
+# VOLUME ./fb-metadata-presenter:/app/fb-metadata-presenter
+
 RUN chown appuser:appgroup /app
 
 ADD --chown=appuser:appgroup https://s3.amazonaws.com/rds-downloads/rds-ca-2019-root.pem ./rds-ca-2019-root.pem
@@ -26,6 +30,7 @@ RUN cat ./rds-ca-2015-root.pem >> ./rds-ca-bundle-root.crt
 RUN chown appuser:appgroup ./rds-ca-bundle-root.crt
 
 COPY --chown=appuser:appgroup Gemfile Gemfile.lock .ruby-version ./
+
 
 RUN gem install bundler
 
