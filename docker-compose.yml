@@ -50,7 +50,7 @@ services:
 
   metadata-app:
     build:
-      context: https://github.com/cabinetoffice/fb-metadata-api.git#main
+      context: https://github.com/cabinetoffice/fb-metadata-api.git#fs-branch
       args:
         BUNDLE_ARGS: ''
     tty: true

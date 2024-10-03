@@ -13,9 +13,11 @@ RUN apk add --no-cache gcompat
 RUN addgroup -g ${UID} -S appgroup && \
   adduser -u ${UID} -S appuser -G appgroup
 
+RUN apk add --no-cache build-base git libpq-dev nodejs
+
 WORKDIR /app
 
-COPY fb-metadata-presenter ../fb-metadata-presenter
+# COPY fb-metadata-presenter ../fb-metadata-presenter
 
 RUN chown appuser:appgroup /app
 

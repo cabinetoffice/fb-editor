@@ -205,6 +205,7 @@ en:
     move_page: "Move page..."
     add_single_question: "Add single question page"
     add_multi_question: "Add multiple question page"
+    add_repeatable_page: "Add repeatable page"
     add_content: "Add content page"
     add_exit: "Add exit page"
     add_check_answers: "Add check answers page"
