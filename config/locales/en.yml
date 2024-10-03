@@ -315,7 +315,6 @@ en:
       textarea: "Textarea"
       email: "Email address"
       number: "Number"
-      arultext: "ArulText"
       date: "Date"
       radios: "Radio buttons"
       checkboxes: "Checkboxes"
