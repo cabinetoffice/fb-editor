@@ -21,10 +21,6 @@ class NewPageGenerator
     @page_metadata ||= begin
       metadata = DefaultMetadata["page.#{page_type}"]
 
-      puts 'ARUL :::'
-      puts metadata
-        puts 'ARUL ::: END'
-
       metadata.tap do
         metadata['_id'] = page_name
         metadata['_uuid'] = page_uuid
