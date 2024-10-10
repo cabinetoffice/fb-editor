@@ -1,7 +1,7 @@
 GIT
-  remote: https://github.com/cabinetoffice/fb-metadata-presenter.git
-  revision: 9f90e4eadd052ab215585eed8790e5b6ad9e3b9d
-  branch: fs-branch
+  remote: https://github.com/smohamedfarouk/fb-metadata-presenter.git
+  revision: 0f2ec3d0cb0c6ec4218d9c9e8f664b3e522f4de5
+  branch: add-dropdown-button
   specs:
     metadata_presenter (3.4.4)
       govspeak (~> 7.1)
