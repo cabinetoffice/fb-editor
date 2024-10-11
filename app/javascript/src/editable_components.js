@@ -1014,8 +1014,11 @@ function editableComponent($node, config) {
     case "date":
       klass = EditableGroupFieldComponent;
       break;
-    case "radios":
+      case "radios":
     case "checkboxes":
+      klass = EditableCollectionFieldComponent;
+      break;
+    case "dropdown":
       klass = EditableCollectionFieldComponent;
       break;
   }
