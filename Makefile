@@ -1,5 +1,5 @@
 UID ?= $(shell id -u)
-DOCKER_COMPOSE = env UID=$(UID) docker-compose -f docker-compose.yml -f docker-compose.development.yml
+DOCKER_COMPOSE = env UID=$(UID) docker compose -f docker-compose.yml -f docker-compose.development.yml
 
 .PHONY: build
 build:
