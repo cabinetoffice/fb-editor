@@ -1,8 +1,2 @@
-ALLOWED_DOMAINS = [
-  'cabinetoffice.gov.uk',
-  'digital.cabinet-office.gov.uk',
-  'csc.gov.uk',
-  'yaml.farm'
-].freeze
-
+ALLOWED_DOMAINS = ENV['ALLOWED_DOMAINS'].strip.split(",").freeze
 Rails.application.config.allowed_domains = ALLOWED_DOMAINS
