@@ -10,6 +10,9 @@ class NewComponentGenerator
 
   def to_metadata
     metadata = DefaultMetadata["component.#{component_type}"]
+    adjusted_component_type = component_type == 'dropdown' ? 'text' : component_type
+
+    metadata = DefaultMetadata["component.#{adjusted_component_type}"]
 
     metadata.tap do
       metadata['_uuid'] = SecureRandom.uuid
