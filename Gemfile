@@ -5,9 +5,7 @@ ruby '3.1.3'
 
 # Metadata presenter - if you need to be on development you can uncomment
 # one of these lines:
-gem 'metadata_presenter',
-    github: 'cabinetoffice/fb-metadata-presenter',
-    branch: 'fs-branch'
+gem 'metadata_presenter', path: '/Users/app/Desktop/projects/uk-project-1/fb-metadata-presenter'
 # gem 'metadata_presenter', path: '../fb-metadata-presenter'
 # gem 'metadata_presenter', '3.4.5'
 
