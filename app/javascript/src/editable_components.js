@@ -1018,6 +1018,9 @@ function editableComponent($node, config) {
     case "checkboxes":
       klass = EditableCollectionFieldComponent;
       break;
+    case "dropdown":
+      klass = EditableCollectionFieldComponent;
+      break;
   }
   return new klass($node, config);
 }
