@@ -9,6 +9,7 @@ class NewComponentGenerator
   end
 
   def to_metadata
+    
     metadata = DefaultMetadata["component.#{component_type}"]
 
     metadata.tap do

@@ -5,14 +5,15 @@
         <li data-action="none">
           <span><%= t('components.menu.question') %></span>
           <ul class="govuk-navigation">
-            <% @page.supported_input_components.each do |component| %>
-              <li data-action="<%= component %>">
-                <a href="#add_component">
-                  <%= t("components.list.#{component.underscore}") %>
-                </a>
-              </li>
-            <% end %>
-          </ul>
+          <% @page.supported_input_components.each do |component| %>
+            <li data-action="<%= component %>">
+              <a href="#add_component">
+                <%= t("components.list.#{component.underscore}") %>
+              </a>
+            </li>
+          <% end %>
+        </ul>
+        
         </li>
         <% if @page.supported_content_components.present? %>
           <%# TODO: This will be basis of v2 code %>

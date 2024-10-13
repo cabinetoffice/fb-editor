@@ -46,6 +46,7 @@ describe('editableComponent', function() {
     { type: 'date', name: 'EditableGroupFieldComponent', expected: editable.EditableGroupFieldComponent },
     { type: 'radios', name: 'EditableCollectionFieldComponent', expected: editable.EditableCollectionFieldComponent },
     { type: 'checkboxes', name: 'EditableCollectionFieldComponent', expected: editable.EditableCollectionFieldComponent },
+    { type: 'dropdown', name: 'EditableCollectionFieldComponent', expected: editable.EditableCollectionFieldComponent },
   ]
 
   tests.forEach( ({type, name, expected}) => {

@@ -1,7 +1,5 @@
-GIT
-  remote: https://github.com/cabinetoffice/fb-metadata-presenter.git
-  revision: 9f90e4eadd052ab215585eed8790e5b6ad9e3b9d
-  branch: fs-branch
+PATH
+  remote: /Users/app/Desktop/projects/uk-project-1/fb-metadata-presenter
   specs:
     metadata_presenter (3.4.4)
       govspeak (~> 7.1)
