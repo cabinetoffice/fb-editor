@@ -10,6 +10,7 @@ gem 'metadata_presenter',
     branch: 'fs-branch'
 # gem 'metadata_presenter', path: '../fb-metadata-presenter'
 # gem 'metadata_presenter', '3.4.5'
+# gem 'metadata_presenter', '3.3.5'
 
 gem 'activerecord-session_store'
 gem 'administrate'
