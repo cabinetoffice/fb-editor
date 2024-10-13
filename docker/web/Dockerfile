@@ -13,11 +13,7 @@ RUN apk add --no-cache gcompat
 RUN addgroup -g ${UID} -S appgroup && \
   adduser -u ${UID} -S appuser -G appgroup
 
-RUN apk add --no-cache build-base git libpq-dev nodejs
-
 WORKDIR /app
-
-# COPY fb-metadata-presenter ../fb-metadata-presenter
 
 RUN chown appuser:appgroup /app
 
@@ -28,7 +24,6 @@ RUN cat ./rds-ca-2015-root.pem >> ./rds-ca-bundle-root.crt
 RUN chown appuser:appgroup ./rds-ca-bundle-root.crt
 
 COPY --chown=appuser:appgroup Gemfile Gemfile.lock .ruby-version ./
-
 
 RUN gem install bundler
 
@@ -48,6 +43,7 @@ USER ${UID}
 # do not actually need to use them.
 ENV GOVUK_APP_DOMAIN ''
 ENV GOVUK_WEBSITE_ROOT ''
+ENV ALLOWED_DOMAINS 'cabinetoffice.gov.uk,digital.cabinet-office.gov.uk'
 
 ARG RAILS_ENV=production
 RUN yarn install --production --check-files
