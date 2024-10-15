@@ -184,6 +184,13 @@ class EditableElement extends EditableBase {
 }
 
 
+
+
+
+
+
+
+
 /* Editable Content:
  * Used for creating complex content control objects on HTML areas such as a <DIV>,
  * or <article>. The content will, when in edit mode, convert to Markdown and expect
@@ -983,6 +990,18 @@ function pasteAsPlainText(event) {
   }
 }
 
+class EditableDropdown extends EditableBase {
+
+  constructor($node, config) {
+    super($node, mergeObjects({
+      selectorElementLabel: config.selectorLabel,
+      selectorElementHint: config.selectorHint
+    }, config));
+    $node.addClass("EditableDropdown");
+    console.log('>>>>> EditableDropdown ');
+  }
+
+}
 
 /* Determin what type of node is passed and create editable content type
  * to match.
@@ -993,6 +1012,9 @@ function pasteAsPlainText(event) {
 function editableComponent($node, config) {
   var klass;
   switch(config.type) {
+    // case "dropdown":
+    //   klass = EditableDropdown;
+    //   break;
     case "element":
       klass = EditableElement;
       break;
@@ -1018,9 +1040,9 @@ function editableComponent($node, config) {
     case "checkboxes":
       klass = EditableCollectionFieldComponent;
       break;
-    case "dropdown":
-      klass = EditableCollectionFieldComponent;
-      break;
+    // case "dropdown":
+    //   klass = EditableDropdown;
+    //   break;
   }
   return new klass($node, config);
 }
@@ -1032,7 +1054,8 @@ module.exports =  {
   EditableComponentBase: EditableComponentBase,
   EditableBase: EditableBase,
   EditableElement: EditableElement,
-  // EditableContent: EditableContent,
+  EditableDropdown:EditableDropdown,
+   // EditableContent: EditableContent,
   EditableTextFieldComponent: EditableTextFieldComponent,
   EditableTextareaFieldComponent: EditableTextareaFieldComponent,
   EditableGroupFieldComponent: EditableGroupFieldComponent,

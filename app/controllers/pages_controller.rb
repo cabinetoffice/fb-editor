@@ -6,6 +6,12 @@ class PagesController < FormController
   EXTRA_COMPONENTS = 'extra_components'.freeze
 
   def edit
+    puts "11111111111"
+    # byebug
+    puts "=====>>> #{@page}"
+    # puts "======> #{@page.components}"
+    # puts "======> #{@page.content_components_by_type}"
+    puts "11111111111"
     return if @page.components.nil?
 
     if @page.autocomplete_component_present?
@@ -140,6 +146,7 @@ class PagesController < FormController
   # The metadata presenter gem requires this objects to render a page
   #
   def assign_required_objects
+    puts "======> #{params}"
     @page = service.find_page_by_uuid(params[:page_uuid])
     @page_answers = MetadataPresenter::PageAnswers.new(@page, {})
   end
