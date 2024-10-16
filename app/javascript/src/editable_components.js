@@ -703,6 +703,8 @@ class EditableCollectionFieldComponent extends EditableComponentBase {
     new EditableCollectionItemInjector(this, config);
 
     $node.addClass("EditableCollectionFieldComponent");
+    $node.find(config.selectorDisabled).removeAttr("disabled");
+
   }
 
   // If we override the set content, we obliterate relationship with the inherited get content.
@@ -1040,9 +1042,9 @@ function editableComponent($node, config) {
     case "checkboxes":
       klass = EditableCollectionFieldComponent;
       break;
-    // case "dropdown":
-    //   klass = EditableDropdown;
-    //   break;
+    case "dropdown":
+      klass = EditableCollectionFieldComponent;
+      break;
   }
   return new klass($node, config);
 }
