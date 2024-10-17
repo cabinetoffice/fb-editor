@@ -31,6 +31,7 @@ const Content = require('./content');
 const SubmitHandler = require('./submit_handler');
 
 const CheckboxesQuestion = require('./question_checkboxes');
+const DropdownQuestion = require('./question_dropdown');
 const RadiosQuestion = require('./question_radios');
 const DateQuestion = require('./question_date');
 const TextQuestion = require('./question_text');
@@ -700,32 +701,32 @@ function enhanceQuestions(view) {
   });
 
     view.$editable.filter("[data-fb-content-type=dropdown]").each(function(i, node) {
-    new CheckboxesQuestion($(this), {
-      form: view.saveButton.$form,
-      view: view,
-      text: {
-        edit: view.text.actions.edit,
-        itemAdd: view.text.option_add,
-        itemRemove: view.text.option_remove,
-        option: view.text.defaults.option,
-        optionHint: view.text.defaults.option_hint,
-        optionalFlag: view.text.question_optional_flag,
-        aria: {
-          answers: view.text.aria.answers
-        }
-      },
+      new DropdownQuestion($(this), {
+        form: view.saveButton.$form,
+        view: view,
+        text: {
+          edit: view.text.actions.edit,
+          itemAdd: view.text.option_add,
+          itemRemove: view.text.option_remove,
+          option: view.text.defaults.option,
+          optionHint: view.text.defaults.option_hint,
+          optionalFlag: view.text.question_optional_flag,
+          aria: {
+            answers: view.text.aria.answers
+          }
+        },
 
-      onItemRemoveConfirmation: function(item) {
-        // @item (EditableComponentItem) Item to be deleted.
-        // Runs before onItemRemove when removing an editable Collection item.
-        // Currently not used but added for future option and consistency
-        // with onItemAdd (provides an opportunity for clean up).
-        view.dialogConfirmationDelete.onConfirm = () => { item.component.removeItem(item) };
-        view.dialogConfirmationDelete.open({
-          heading: view.text.dialogs.heading_delete_option.replace(/%{option label}/, item._elements.label.$node.text()),
-          confirm: view.text.dialogs.button_delete_option
-        });
-      }
+        onItemRemoveConfirmation: function(item) {
+          // @item (EditableComponentItem) Item to be deleted.
+          // Runs before onItemRemove when removing an editable Collection item.
+          // Currently not used but added for future option and consistency
+          // with onItemAdd (provides an opportunity for clean up).
+          view.dialogConfirmationDelete.onConfirm = () => { item.component.removeItem(item) };
+          view.dialogConfirmationDelete.open({
+            heading: view.text.dialogs.heading_delete_option.replace(/%{option label}/, item._elements.label.$node.text()),
+            confirm: view.text.dialogs.button_delete_option
+          });
+        }
     });
   });
 
