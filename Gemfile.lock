@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/cabinetoffice/fb-metadata-presenter.git
-  revision: 9f90e4eadd052ab215585eed8790e5b6ad9e3b9d
+  revision: 82ada5223bf46b3352d2d87d429830924cf2961b
   branch: fs-branch
   specs:
     metadata_presenter (3.4.4)
