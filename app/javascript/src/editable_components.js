@@ -892,6 +892,7 @@ class EditableCollectionFieldComponent extends EditableComponentBase {
  * </div>
  **/
 class EditableSelectFieldComponent extends EditableComponentBase {
+//class EditableSelectFieldComponent extends EditableCollectionFieldComponent {
   constructor($node, config) {
     super($node, mergeObjects({
       selectorElementLabel: config.selectorLabel,
@@ -902,14 +903,58 @@ class EditableSelectFieldComponent extends EditableComponentBase {
     // config key not dependent on type
     this._preservedItemCount = 2; // Either minimum 2 options otherwise this should be a checkbox component in the view.
 
-    this.#createCollectionItemTemplate(config);
-    this.#createEditableCollectionItems(config);
+    //this.#createCollectionItemTemplate(config);
+    //this.#createEditableCollectionItems(config);
 
     new EditableCollectionItemInjector(this, config);
 
+    //$node.addClass("EditableSelectFieldComponent");
     $node.addClass("EditableCollectionFieldComponent");
     $node.find(config.selectorDisabled).removeAttr("disabled");
 
+    $(".govuk-heading-xl").addClass("EditableElement");
+    $(".govuk-heading-xl").attr("contenteditable", "true");
+    $("#answers-heading-hint").attr("contenteditable", "true");
+    this.#populateOptionsAsInput($node, config);
+
+  }
+
+  #populateOptionsAsInput($node, config) {
+    console.log("populateOptionsAsInput");
+    console.log(config.data.items);
+    $(document).ready(function() {
+      for(i=0; i<config.data.items.length; i++) {
+        option_group = createElement("div", "", "govuk-form-group");
+        option_label = createElement("label", "Edit option in select above: ", "govuk-label");
+        option_group.append(option_label);
+        option_id = `option_${i.toString()}`;
+        option_input = createElement("input", "", "govuk-input govuk-!-width-one-quarter",
+                                     {"attributes": {"contenteditable": true,
+                                                     "id": option_id},
+                                      "value": config.data.items[i].label});
+        option_group.append(option_input);
+        $node.find("button").eq(1).before(option_group);
+        element = $("#answers-heading-field").find('option')[i];
+        $(element).attr("id", option_id);
+        $(option_input).on("input", function() {
+          id = $(this).attr("id");
+          selector = "option#" + id;
+          $(selector).attr('selected','selected');
+          text_input = $("input#" + id).val();
+          $(selector).text(text_input);
+        });
+        $(option_input).on("blur", function() {
+          $(`option#${$(this).attr("id")}`).removeAttr("selected");
+        });
+        $(option_input).on("focus", function() {
+          id = $(this).attr("id");
+          selector = "option#" + id;
+          $(selector).attr("selected", "selected");
+          text_input = $("input#" + id).val();
+          $(selector).text(text_input);
+        });
+      }
+    });
   }
 
   // If we override the set content, we obliterate relationship with the inherited get content.
@@ -962,7 +1007,7 @@ class EditableSelectFieldComponent extends EditableComponentBase {
    * Creates the initialising values for this.items
    * config (Object) key/value pairs for extra information.
    **/
-    #createEditableCollectionItems(config) {
+  #createEditableCollectionItems(config) {
     var component = this;
     component.$node.find(config.selectorCollectionItem).each(function(i) {
       // WARNING! DO NOT MOVE data or itemConfig OUTSIDE OF THIS LOOP
@@ -1020,16 +1065,56 @@ class EditableSelectFieldComponent extends EditableComponentBase {
 
   // Dynamically adds an item to the components collection
   addItem() {
-    // Component should always have at least one item, otherwise something is very wrong.
-    var $lastItem = this.items[this.items.length - 1].$node;
-    var $clone = this.$itemTemplate.clone();
-    $lastItem.after($clone);
-    var item = new EditableComponentCollectionItem(this, $clone, this.$itemTemplate.data("config"));
-    this.items.push(item);
-    this.#updateItems();
+    // // Component should always have at least one item, otherwise something is very wrong.
+    // var $lastItem = this.items[this.items.length - 1].$node;
+    // var $clone = this.$itemTemplate.clone();
+    // $lastItem.after($clone);
+    // var item = new EditableComponentCollectionItem(this, $clone, this.$itemTemplate.data("config"));
+    // this.items.push(item);
+    // this.#updateItems();
 
-    safelyActivateFunction(this._config.onItemAdd, $clone);
-    this.emitSaveRequired();
+    // safelyActivateFunction(this._config.onItemAdd, $clone);
+    // this.emitSaveRequired();
+    option_group = createElement("div", "", "govuk-form-group");
+    option_label = createElement("label", "Edit option in select above: ", "govuk-label");
+    option_group.append(option_label);
+    target_select = $("#answers-heading-field");
+    option_count = (target_select.find("option").length + 1);
+    option_id = ("option_" + option_count.toString());
+    option_input = createElement("input", "", "govuk-input govuk-!-width-one-quarter",
+                                 {"attributes": {"contenteditable": true,
+                                                 "id": option_id},
+                                  "value": "Placeholder"});
+    //$input.on("blur.editablecontent", this.update.bind(this) );
+    $(option_input).on("input", function() {
+      id = $(this).attr("id");
+      selector = "option#" + id;
+      $(selector).attr('selected','selected');
+      text_input = $("input#" + id).val();
+      $(selector).text(text_input);
+    });
+    $(option_input).on("blur", function() {
+      $(`option#${$(this).attr("id")}`).removeAttr("selected");
+    });
+    $(option_input).on("focus", function() {
+      id = $(this).attr("id");
+      selector = "option#" + id;
+      $(selector).attr("selected", "selected");
+      text_input = $("input#" + id).val();
+      $(selector).text(text_input);
+    });
+    console.log("option_input: ", option_input);
+    option_group.append(option_input);
+    // TODO: hack, clean it up
+    this.$node.find("button").eq(1).before(option_group);
+    option = this.#newOption({"text":"Placeholder", "value": "placeholder", "id": option_id})
+    target_select.append(option);
+  }
+
+  #newOption(params) {
+    option = new Option(params.text, params.value);
+    option.id = params.id;
+    return option;
   }
 
   // Dynamically removes an item to the components collection
@@ -1245,7 +1330,7 @@ function editableComponent($node, config) {
       klass = EditableCollectionFieldComponent;
       break;
     case "dropdown":
-      klass = EditableCollectionFieldComponent;
+      klass = EditableSelectFieldComponent;
       break;
   }
   return new klass($node, config);

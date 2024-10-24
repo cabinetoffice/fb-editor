@@ -45,7 +45,7 @@ function mergeObjects(a, b, ignore) {
  *   var $node = $(createElement("button", "Click me", "something"));
  * Hardly worth it, but makes code look pretty.
  **/
-function createElement(tag, text, classes) {
+function createElement(tag, text, classes, attributes_value) {
   var node = document.createElement(tag);
   if (arguments.length > 1) {
     if(text != '' && text != undefined) {
@@ -54,6 +54,16 @@ function createElement(tag, text, classes) {
 
     if(arguments.length > 2 && classes != '' && classes != undefined) {
       node.className = classes;
+    }
+
+    if(arguments.length > 3 && attributes_value != '' && attributes_value != undefined) {
+      Object.entries(attributes_value.attributes).forEach(
+        ([k, v]) => node.setAttribute(k, v)
+      )
+
+      if (attributes_value.value != undefined) {
+        node.value = attributes_value.value
+      }
     }
   }
   return document.body.appendChild(node);
